@@ -2,6 +2,11 @@ import java.util.Scanner;
 
 public class MethodsExercises {
     public static void main(String[] args) {
+        System.out.println(returnName());
+        System.out.println(returnLongerString("timothy", "isabella"));
+        System.out.println(canBeHalved(9ww));
+
+
 // 1. BASIC ARITHMETIC
         System.out.println("addition: " + addition(15, 5));
         System.out.println("subtraction: " + subtraction(34, 12));
@@ -20,6 +25,35 @@ public class MethodsExercises {
 
 
     }
+
+    public static String returnName () {
+        Scanner userName = new Scanner(System.in);
+        System.out.println("what is your name? ");
+        String responce = userName.nextLine();
+        return responce;
+    }
+
+    public static String returnLongerString(String str1, String str2) {
+        if (str1.length() >= str2.length()) {
+            return str1;
+        }else {
+            return str2;
+        }
+
+    }
+
+    public static boolean canBeHalved(int num) {
+        if (num % 2 == 0) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+
+
+
+
 // 1. BASIC ARITHMETIC
     public static int addition(int add1, int add2) {
         return add1 + add2;

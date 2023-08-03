@@ -14,7 +14,7 @@ public class Bob {
                 System.out.println("calm down bud...");
             } else if (talk.endsWith("?")) {
                 System.out.println("not sure dude");
-            } else if (talk.endsWith("")) {
+            } else if (talk.equals("")) {
                 System.out.println("fine i didnt want to talk either");
             } else {
                 System.out.println("later loser");
