@@ -1,10 +1,13 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class MethodsExercises {
     public static void main(String[] args) {
+        System.out.println(randomNumber());
+        System.out.println(highLow());
         System.out.println(returnName());
         System.out.println(returnLongerString("timothy", "isabella"));
-        System.out.println(canBeHalved(9ww));
+        System.out.println(canBeHalved(9));
 
 
 // 1. BASIC ARITHMETIC
@@ -144,5 +147,29 @@ public class MethodsExercises {
         }
     }
 
+    public static int randomNumber() {
+        Random rand = new Random();
+        int randomNumber = rand.nextInt(100) + 1;
+        return randomNumber;
+    }
 
+    public static String highLow() {
+        int number1 = randomNumber();
+        System.out.println(number1);
+        Scanner userGuess = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Guess the number 1 - 100: ");
+            int userNumber = userGuess.nextInt();
+
+            if (number1 == userNumber) {
+                return "You got it, the secret number was " + number1;
+            } else if (number1 > userNumber) {
+                System.out.println("higher. Try again");
+
+            } else {
+                System.out.println("lower. Try again");
+            }
+        }
+    }
 }
